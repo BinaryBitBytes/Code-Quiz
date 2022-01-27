@@ -21,10 +21,20 @@
         </div>
     </div>
 
+    <div class="form" type="form" id="">
+      <form>
+        <label for="username">User:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <span type="button" id="submitButton" aria-pressed="false" onclick="clickPress(event)" onKeyDown="clickPress(event)">Enter User Name: </span><!--aria pressed false is showing 
+          that the toggle button is not currently pressed
+          using--- Using Span to label the input button as well as using onclick and on KeyDown to handle event-->
+      </form>
+    </div>
+
     <div>
         <button type="button" class="btn btn-outline-secondary" id="button-addon1" data-dismiss="modal" aria-label="Close">Quiz
-        <input type="button" class="form-control" placeholder="" aria-label="quiz" aria-describedby="button-addon1">quiz button
-            <span aria-hidden="true">&times;</span>
+        <!--<input type="button" class="form-control" placeholder="" aria-label="quiz" aria-describedby="button-addon1">quiz button-->
+            <!--<span aria-hidden="true">&times;</span> This item presents an x to the right of the content button.-->
         </button>
     </div>
 

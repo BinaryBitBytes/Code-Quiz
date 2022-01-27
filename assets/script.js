@@ -2,6 +2,13 @@
 THEN a timer starts and I am presented with a question*/
 var currentTimer =('');
 var startTimer = 75; //start timer with 75 seconds on it
+
+window.addEventListener("keydown"||"click", function clickPress(event) {
+    if (event instanceof KeyboardEvent && event.key !== "Enter".charCodeAt(13)  && event.key !=='')
+    //this will handle key press and mouse click
+    event.preventDefault();
+});
+
 function time(currentTimer) {
     setInterval(function(){ //set interval function allows us to create a time interval to have a start and an end
     currentTimer = startTimer--;
@@ -11,18 +18,40 @@ function time(currentTimer) {
     localStorage.setItem;//sets the timer to local storage
     localStorage.getItem;//getchest the timer from local storage
 };
+
 function timeUp(){//parent fn to out of time function
     setTimeout(outTime, 1000);
+    if(now>start == end){
+        let end = {
+            i=now,
+            name:"test",
+
+        };
+        end=0;
+        /*function(i=0 , i<=1000, i--;){
+        };
     }
-function outTime(){ //fn defined for letting user out of time
+
+        };
+
+    }else if{
+        let outTime = alert('You ran out of time and you lose');
+    }else{
+
+    };
+
+    };
+    };*/
+
+function outTime()){ //fn defined for letting user out of time
     alert("You are out of time!"); //alert message telling the user they are out of time.
 }
 
 /*WHEN I answer a question
 THEN I am presented with another question*/
 
-var inAnswer = '';
 var userAnswer = document.querySelector('inAnswer#a'); //value stored in answer
+var inAnswer = '';
 var a = Text('What language is used to mark up web pages?');
 var aAnswer = Text('HTML'.toUpperCase);
 var b = Text('What language is used to style web pages?');
