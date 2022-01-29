@@ -1,3 +1,6 @@
+//Starts the prompt at the first question with a indexed position of 0
+prompt(0);
+
 function prompt(store){
     document.getElementById("question").innerHTML = jsonData[store].questionz;
     document.getElementById("option1").innerHTML = jsonData[store].option1;

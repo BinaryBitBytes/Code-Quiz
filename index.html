@@ -13,61 +13,64 @@
     <title id="title">Code Quiz</title>
 
   </head>
-  <body>
-    <br>
+  <body style=border:solid;border-width:5px;padding:5px;>
     <div id="jumbotron" class="jumbotron jumbotron-fluid">
         <div class="container" style=text-align:center;>
-          <h1 id="Welcome" class="display-4">Welcome to the code quiz. Click Start to being the game.</h1>
+          <h1 id="Welcome" class="display-4" style=border:solid;border-width:5px;padding:5px>Welcome to the code quiz. Click Start to being the game.</h1>
           <br>
-          <p id="timer" style="border: 8px">timer</p>
-          <br>
+          <span style=display:flex;>
+            <div id="timer" style=border:solid;border-width:5px;padding:5px;height:75px;width:75px;margin:auto;>TIMER</div>
+            <div id="timer" style=border:solid;border-width:5px;padding:5px;height:75px;width:75px;margin:auto;>SCORE</div>
+          </span>
           <p id="challange" class="lead">You must guess the correct answer in order to continue to the next step of the game.</p>
         </div>
     </div>
-    <br>
-    <div>
+    <div style=border:solid;border-width:5px;padding:5px;>
 
-    </div>
-    <div class="form" type="form" id="userInfo">
-      <form style=text-align:center;>
-        <label for="username" style=font-weight:600;>User:</label><br>
-        <input type="text" id="username" name="username"><br>
-        <span type="button" id="submitButton" aria-pressed="false" style=font-size:small; onclick="clickPress(event)" onKeyDown="clickPress(event)">
-          <div style=font-weight:600;>Click Start Quiz</div> to Submit<br>
-          your name & to start: </span><!--aria pressed false is showing 
-          that the toggle button is not currently pressed
-          using--- Using Span to label the input button as well as using onclick and on KeyDown to handle event-->
-      </form>
-    </div>
-
-    <div style=text-align:center;>
-        <button type="button" class="btn btn-outline-secondary" id="button-addon1" data-dismiss="modal" aria-label="Close">Start Quiz
-        <!--<input type="button" class="form-control" placeholder="" aria-label="quiz" aria-describedby="button-addon1">quiz button-->
-            <!--<span aria-hidden="true">&times;</span> This item presents an x to the right of the content button.-->
-        </button>
-    </div>
-    <div class="questionBox">
-      <div id="question">
-        <div>
-        <input name ="options" style="radio" id="option1" >
-          <span id ="option_1">
-        </div>
-        <div>
-        <input name ="options" style="radio" id="option2" >
-          <span id ="option_2">
-        </div>
-        <div>
-        <input name ="options" style="radio" id="option3" >
-          <span id ="option_3">
-        </div>
-        <div>
-        <input name ="options" style="radio" id="option4" >
-          <span id ="option_4">
-        </div>
+      <div class="form" type="form" id="userInfo">
+        <form style=text-align:center;>
+          <label for="username" style=font-weight:600;>User:</label><br>
+          <input type="text" id="username" name="username"><br>
+          <span type="button" id="submitButton" aria-pressed="false" style=font-size:small; onclick="clickPress(event)" onKeyDown="clickPress(event)">
+            <div style=font-weight:600;>Click Start Quiz</div> to Submit<br>
+            your name & to start: </span><!--aria pressed false is showing 
+            that the toggle button is not currently pressed
+            using--- Using Span to label the input button as well as using onclick and on KeyDown to handle event-->
+        </form>
       </div>
-      <button onclick="checkAnswer()">Submit-Next Question</button>
+
+      <div style=text-align:center;>
+          <button type="button" class="btn btn-outline-secondary" id="button-addon1" data-dismiss="modal" aria-label="Close">Start Quiz
+          <!--<input type="button" class="form-control" placeholder="" aria-label="quiz" aria-describedby="button-addon1">quiz button-->
+              <!--<span aria-hidden="true">&times;</span> This item presents an x to the right of the content button.-->
+          </button>
+      </div>
+      <br>
+      <div class="questionBox" style=text-align:center;>
+        <div id="question">
+          <div>
+          <input type="radio" name ="options" id="option1" >
+            <span id ="option_1">
+          </div>
+          <div>
+          <input type="checkbox"  name ="options" style="radio" id="option2" >
+            <span id ="option_2">
+          </div>
+          <div>
+          <input type="radio"  name ="options" style="radio" id="option3" >
+            <span id ="option_3">
+          </div>
+          <div>
+          <input type="checkbox" name ="options" style="radio" id="option4" >
+            <span id ="option_4">
+          </div>
+        </div>
+        <button onclick="checkAnswer()">Submit-Next Question</button>
+      </div>
     </div>
 
     <script src="./assets/script.js"></script>
+    <script src="./assets/questions.json"></script>
+    <script src="./assets/son.js"></script>
   </body>
 </html>
