@@ -3,9 +3,9 @@ prompt(0);
 
 function prompt(store){
     document.getElementById("question").innerHTML = jsonData[store].questionz;
-    document.getElementById("option1").innerHTML = jsonData[store].option1;
-    document.getElementById("option2").innerHTML = jsonData[store].option2;
-    document.getElementById("option3").innerHTML = jsonData[store].option3;
+    document.getElementById("FIRSTCHOICE").innerHTML = jsonData[store].FIRSTCHOICE;
+    document.getElementById("option_2").innerHTML = jsonData[store].option2;
+    document.getElementById("option_3").innerHTML = jsonData[store].option3;
 }
 
 var i=0;

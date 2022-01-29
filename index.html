@@ -15,18 +15,20 @@
   </head>
   <body style=border:solid;border-width:5px;padding:5px;>
     <div id="jumbotron" class="jumbotron jumbotron-fluid">
-        <div class="container" style=text-align:center;>
-          <h1 id="Welcome" class="display-4" style=border:solid;border-width:5px;padding:5px>Welcome to the code quiz. Click Start to being the game.</h1>
-          <br>
-          <span style=display:flex;>
-            <div id="timer" style=border:solid;border-width:5px;padding:5px;height:75px;width:75px;margin:auto;>TIMER</div>
+      <div class="container" style=text-align:center;>
+        <h1 id="Welcome" class="display-4" style=border:solid;border-width:5px;padding:5px>Welcome to the code quiz. Click Start to being the game.</h1>
+        <div style= border:dotted;border-width:2px;padding:2px;word-wrap:normal;width:95px;height:40px;> <!--Added progress bar need to java/jquery the variable-->
+          <meter id="progressBar" value="3" min = "0" max ="4" style=text-align:center;></meter>
+        </div><!--declare a variable in and use inlinehtml to inject value-->
+        <br>
+        <span style=display:flex;>
+          <div id="timer" style=border:solid;border-width:5px;padding:5px;height:75px;width:75px;margin:auto;>TIMER</div>
             <div id="timer" style=border:solid;border-width:5px;padding:5px;height:75px;width:75px;margin:auto;>SCORE</div>
           </span>
           <p id="challange" class="lead">You must guess the correct answer in order to continue to the next step of the game.</p>
         </div>
     </div>
     <div style=border:solid;border-width:5px;padding:5px;>
-
       <div class="form" type="form" id="userInfo">
         <form style=text-align:center;>
           <label for="username" style=font-weight:600;>User:</label><br>
@@ -50,7 +52,7 @@
         <div id="question">
           <div>
           <input type="radio" name ="options" id="option1">
-            <span id ="option_1">
+            <span id ="FIRSTCHOICE">
           </div>
           <div>
           <input type="radio"  name ="options" id="option2" >
