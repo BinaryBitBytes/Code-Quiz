@@ -1,11 +1,22 @@
 /*WHEN I click the start button
 THEN a timer starts and I am presented with a question*/
 const button = document.querySelector('button');
+const questions = document.getElementById('question');
+const score= document.getElementByID("currentScore");
 var currentTimer =('');
 var startTimer = 75; //start timer with 75 seconds on it
 var userAnswer = document.querySelector('inAnswer#a'); //value stored in answer
 var inAnswer = '';
-var a = Text('What language is used to mark up web pages?');//first question
+let questions= [];//currently an empty array
+fetch("questions.json")
+    .then(ask ,{
+    return ask.json();
+    })
+    .then(loadedQuestions,{
+    console.log(loadedQuestions);
+    questions=loadedQuestions;
+    });
+/*var a = Text('What language is used to mark up web pages?');//first question
 var aAnswer = Text('HTML'.toUpperCase); //answer to first question
 var b = Text('What language is used to style web pages?');// second question
 var bAnswer = Text('CSS'.toUpperCase);// answer to second question
@@ -13,7 +24,9 @@ var c = Text('What language is used make web pages interactive?');//first questi
 var cAnswer = Text('JavaScript'.toUpperCase); //answer to first question
 var d = Text('What language is used to transmit data in web pages?');// second question
 var dAnswer = Text('JSON'.toUpperCase);// answer to second question
-var questions = ['a','b','c','d'];// creating a varaible and making it equeal to the array of questions
+*/
+let currentQuestion= {};
+//var questions = ['a','b','c','d'];// creating a varaible and making it equeal to the array of questions
 var askQuestion ='';
 var nextQuestion='';
 var checkAnswer='';
