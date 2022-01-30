@@ -17,13 +17,13 @@
     <div id="jumbotron" class="jumbotron jumbotron-fluid">
       <div class="container" style=text-align:center;>
         <h1 id="Welcome" class="display-4" style=border:solid;border-width:5px;padding:5px>Welcome to the code quiz. Click Start to being the game.</h1>
-        <div style= border:dotted;border-width:2px;padding:2px;word-wrap:normal;width:95px;height:40px;> <!--Added progress bar need to java/jquery the variable-->
-          <meter id="progressBar" value="2" min = "0" max ="4" low="2" high="4" style=text-align:center;></meter>
-        </div><!--declare a variable in and use inlinehtml to inject value-->
         <br>
         <span style=display:flex;>
           <div id="timer" style=border:solid;border-width:5px;padding:5px;height:75px;width:75px;margin:auto;>TIMER</div>
-            <div id="timer" style=border:solid;border-width:5px;padding:5px;height:75px;width:75px;margin:auto;>SCORE</div>
+          <div style= border:dotted;border-width:2px;padding:2px;word-wrap:normal;width:95px;height:40px;> Progress <!--Added progress bar need to java/jquery the variable-->
+            <meter id="progressBar" value="2" min = "0" max ="4" low="2" high="4" style=text-align:center;></meter>
+          </div><!--declare a variable in and use inlinehtml to inject value-->
+          <div class="currentScore" id="score" style=border:solid;border-width:5px;padding:5px;height:75px;width:75px;margin:auto;>SCORE</div>
           </span>
           <p id="challange" class="lead">You must guess the correct answer in order to continue to the next step of the game.</p>
         </div>
@@ -67,7 +67,7 @@
             <span id ="option_4">
           </div>
         </div>
-        <button onclick="checkAnswer()">Submit-Next Question</button>
+        <button id="button">Submit-Next Question</button>
       </div>
     </div>
 

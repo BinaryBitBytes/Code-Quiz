@@ -35,12 +35,3 @@
 
     }
 ]
-/*var a = Text('What language is used to mark up web pages?');//first question
-var aAnswer = Text('HTML'.toUpperCase); //answer to first question
-var b = Text('What language is used to style web pages?');// second question
-var bAnswer = Text('CSS'.toUpperCase);// answer to second question
-var c = Text('What language is used make web pages interactive?');//first question
-var cAnswer = Text('JavaScript'.toUpperCase); //answer to first question
-var d = Text('What language is used to transmit data in web pages?');// second question
-var dAnswer = Text('JSON'.toUpperCase);// answer to second question
-*/
