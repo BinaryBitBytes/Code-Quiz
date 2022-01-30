@@ -7,7 +7,9 @@ var currentTimer =('');
 var startTimer = 75; //start timer with 75 seconds on it
 var userAnswer = document.querySelector('inAnswer#a'); //value stored in answer
 var inAnswer = '';
-let questions= [];//currently an empty array
+/*let questions= [];currently an empty array COMMENTED THIS OUT 
+BECAUSE ITS ALREADY IN USE; CONSIDER USING LOCAL VARAIBLES INSTEAD OF GLOBAL*/
+/*-------- FETCH JSON COMMENTED OUT
 fetch("questions.json")
     .then(ask ,{
     return ask.json();
@@ -16,6 +18,7 @@ fetch("questions.json")
     console.log(loadedQuestions);
     questions=loadedQuestions;
     });
+*/
 /*var a = Text('What language is used to mark up web pages?');//first question
 var aAnswer = Text('HTML'.toUpperCase); //answer to first question
 var b = Text('What language is used to style web pages?');// second question
