@@ -4,11 +4,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./assets/jqueryscript.js"></script>
+    <script src="./assets/questions.json"></script>
+    <script src="./assets/son.js"></script>
     <script
     src="https://code.jquery.com/jquery-1.12.4.js"
     integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
     crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     <title id="title">Code Quiz</title>
 
@@ -50,29 +52,37 @@
       <br>
       <div class="questionBox" style=text-align:center;>
         <div id="question">
-          <div>
-          <input type="radio" name ="options" id="option1">
-            <span id ="FIRSTCHOICE">
-          </div>
-          <div>
-          <input type="radio"  name ="options" id="option2" >
-            <span id ="option_2">
-          </div>
-          <div>
-          <input type="radio"  name ="options" id="option3" >
-            <span id ="option_3">
-          </div>
-          <div>
-          <input type="radio" name ="options" id="option4" >
-            <span id ="option_4">
-          </div>
+          <ol style=display:inline-block;>
+            <div>
+              <li class="FIRSTCHOICE">
+                <input type="radio" name ="options" id="option1">
+                  <!--<span id ="FIRSTCHOICE"></span>-->
+              </li>
+            </div>
+            <div>
+              <li class="SECONDCHOICE">
+                <input type="radio"  name ="options" id="option2" >
+                  <!--<span id ="option_2">-->
+              </li>
+            </div>
+            <div>
+              <li class="THIRDCHOICE">
+            <input type="radio"  name ="options" id="option3" >
+              <!--<span id ="option_3">-->
+              </li>
+            </div>
+            <div>
+              <li class="FOURTHCHOICE">
+            <input type="radio" name ="options" id="option4" >
+              <!--<span id ="option_4">-->
+              </li>
+            </div>
+          </ol>
         </div>
         <button id="button">Submit-Next Question</button>
       </div>
     </div>
 
     <script src="./assets/script.js"></script>
-    <script src="./assets/questions.json"></script>
-    <script src="./assets/son.js"></script>
   </body>
 </html>
