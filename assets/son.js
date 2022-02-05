@@ -1,5 +1,5 @@
 //Starts the prompt at the first question with a indexed position of 0
-prompt(0);
+/*prompt(0);
 
 function prompt(store){
     document.getElementById("question").innerHTML = jsonData[store].questionz;
@@ -26,3 +26,4 @@ if(jsonData.length-1 < i){
 }
 prompt(i);
 }
+*/

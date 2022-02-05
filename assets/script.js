@@ -4,19 +4,54 @@ const time = new Date();
 const startTimer = 75; //start timer with 75 seconds on it
 //var timer = theTime.setSeconds(startTimer);
 const buttonGet = button;
-const questions = document.getElementById('question');
+const questions = [
+    {
+        "QUESTION": "What language is used to mark up web pages?",
+        "FIRSTCHOICE": "JSON",
+        "SECONDCHOICE":"HTML",
+        "THIRDCHOICE":"BOOTSTRAP",
+        "FOURTHCHOICE":"PYTHON",
+        "ANSWER": 2
+    },
+    {
+        "QUESTION": "What language is used to style web pages",
+        "FIRSTCHOICE": "CSS",
+        "SECONDCHOICE":"JAVASCRIPT",
+        "THIRDCHOICE":"JSON",
+        "FOURTHCHOICE":"HTML",
+        "ANSWER": 1
+    },
+    {
+        "QUESTION": "What language is used make web pages interactive?",
+        "FIRSTCHOICE": "API'S",
+        "SECONDCHOICE":"JSON",
+        "THIRDCHOICE":"JQUERY",
+        "FOURTHCHOICE":"JAVASCRIPT",
+        "ANSWER": 4
+    },
+    {
+        "QUESTION": "What language is used to transmit data in web pages?",
+        "FIRSTCHOICE": "SQL",
+        "SECONDCHOICE":"JAVASCRIPT",
+        "THIRDCHOICE":"BOOTSTRAP",
+        "FOURTHCHOICE":"JSON",
+        "ANSWER":4
+    }
+];
+//document.getElementById('question');
 const score= document.getElementsByClassName(".currentScore");
-let setSeconds('time') =7500;
 const currentTimer =('');
 const endOfTimer = 0;
+var setSeconds=time;
 var askQuestion ='';
 var nextQuestion='';
+var inAnswer = '';
 var checkAnswer=[$.getJSON("questions.json")];
-const setTime= window.localStorage.setItem(setSeconds(),('time'));//sets the timer to local storage
+var seconds= time.setSeconds(75);
+const setTime= window.localStorage(seconds, 'time');//setItem.(setSeconds(),('time');//sets the timer to local storage
 const holdTime= window.localStorage.getItem(getSeconds(),('time'));//getchest the timer from local storage
 const resetTime= window.localStorage.Clear('time');
 var userAnswer = document.querySelector('inAnswer#a'); //value stored in answer
-var inAnswer = '';
 let currentQuestion= [''];
 
 function outTime(tell){ //fn defined for letting user out of time
@@ -27,11 +62,11 @@ function outTime(tell){ //fn defined for letting user out of time
     }; //alert message telling the user they are out of time.
 };
 
-function displayTimer(){
-    let boxTime=currentTimer;
-}
+/*    function displayTimer(){
+        let boxTime=currentTimer;
+    }    /Will try to use jquery to call this function on the DOM */
 
-function startQuiz(){
+function startQuiz(seconds){
     var current= new Date().getSeconds();
     var count = setInterval(function(){
         var meow = new Date().getTime();
@@ -98,3 +133,5 @@ function theTime(currentTimer,hold) {
             keepPlaying && nextQuestion;
         };
     };
+
+    startQuiz();

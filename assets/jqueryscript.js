@@ -1,3 +1,6 @@
+/* 
+$("#timer").localStorage.setTime("time");
+
 $.getJSON("/questions.json",function(questions){
     var question =[];
     $.each( questions, function( key, val ) {
@@ -12,3 +15,5 @@ $.getJSON("/questions.json",function(questions){
     console.log(questions[1,2,3,4].QUESTION)
     $('#question').append(question)
 })
+
+*/
