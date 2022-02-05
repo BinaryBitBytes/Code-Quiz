@@ -1,6 +1,7 @@
 /*WHEN I click the start button
 THEN a timer starts and I am presented with a questioen*/
 const time = new Date();
+const SecondS = new Date().getTime()/1000;
 const startTimer = 75; //start timer with 75 seconds on it
 //var timer = theTime.setSeconds(startTimer);
 const buttonGet = button;
@@ -48,9 +49,9 @@ var nextQuestion='';
 var inAnswer = '';
 var checkAnswer=[$.getJSON("questions.json")];
 var seconds= time.setSeconds(75);
-const setTime= window.localStorage(seconds, 'time');//setItem.(setSeconds(),('time');//sets the timer to local storage
-const holdTime= window.localStorage.getItem(getSeconds(),('time'));//getchest the timer from local storage
-const resetTime= window.localStorage.Clear('time');
+const setTime= window.localStorage.setItem(SecondS, 'time');//setItem.(setSeconds(),('time');//sets the timer to local storage
+const holdTime= window.localStorage.getItem(SecondS,('time'));//getchest the timer from local storage
+//clear the local storage?///const resetTime= window.localStorage.Clear('time');
 var userAnswer = document.querySelector('inAnswer#a'); //value stored in answer
 let currentQuestion= [''];
 
@@ -69,9 +70,9 @@ function outTime(tell){ //fn defined for letting user out of time
 function startQuiz(seconds){
     var current= new Date().getSeconds();
     var count = setInterval(function(){
-        var meow = new Date().getTime();
-        var down= current - meow;
-        var seconds = Math.floor((down % (1000 * 60)) / 1000);    
+    var meow = new Date().getTime();
+    var down= current - meow;
+    var seconds = Math.floor((down % (1000 * 60)) / 1000);    
     });
     document.getElementById("timer").innerHTML =seconds + "s ";
     
@@ -82,7 +83,8 @@ function startQuiz(seconds){
 }
 
 addEventListener("click", countDown);
-function countDown(started){
+
+function countDown(theTime){
     document.getElementsById("button").addEventListener("click",countDown());
     let buttonClick=document.getElementById("button").onclick;
     buttonClick.style.color = "red";
@@ -134,4 +136,4 @@ function theTime(currentTimer,hold) {
         };
     };
 
-    startQuiz();
+    //startQuiz();
