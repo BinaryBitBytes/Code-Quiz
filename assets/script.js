@@ -63,9 +63,7 @@ function outTime(tell) { //fn defined for letting user out of time
     }; //alert message telling the user they are out of time.
 };
 
-/*    function displayTimer(){
-        let boxTime=currentTimer;
-    }    /Will try to use jquery to call this function on the DOM */
+
 
 function startQuiz() {
     var count = setInterval(function () {
@@ -73,14 +71,13 @@ function startQuiz() {
         document.getElementById("timer").innerHTML = startTimer;
 
 
-        if (startTimer === 0) {
+        if (startTimer == 0) { // if i were to do ===0 then it would count to negative and not print out of time. This would continue counting in negative direction.
             clearInterval(count);
             document.getElementById("timer").innerHTML = "Out if Time";
         };
 
         console.log('hi')
     }, 1000);
-
     displayQuestion();
 }
 
@@ -95,7 +92,19 @@ document.getElementById("button-addon1").addEventListener("click", function () {
 function displayQuestion(){
     var h1 = document.createElement('h1');
     h1.append(questions[questionIndex].QUESTION);
+    var form =document.createElement('form');
+    form.append(questions[questionIndex].FIRSTCHOICE);
+    form.append(questions[questionIndex].SECONDCHOICE);
+    form.append(questions[questionIndex].THIRDCHOICE);
+    form.append(questions[questionIndex].FOURTHCHOICE);
     document.getElementById('question').append(h1);
+    document.getElementById('first').append(form);
+    document.getElementById('second').append(form);
+    document.getElementById('third').append(form);
+    document.getElementById('fourth').append(form);
+    //
+    //h1.append(questions[questionIndex].QUESTION.);
+    //document.getElementById('question').append(h1);
 
 
     
