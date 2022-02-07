@@ -92,16 +92,19 @@ document.getElementById("button-addon1").addEventListener("click", function () {
 function displayQuestion(){
     var h1 = document.createElement('h1');
     h1.append(questions[questionIndex].QUESTION);
-    var form =document.createElement('form');
-    form.append(questions[questionIndex].FIRSTCHOICE);
-    form.append(questions[questionIndex].SECONDCHOICE);
-    form.append(questions[questionIndex].THIRDCHOICE);
-    form.append(questions[questionIndex].FOURTHCHOICE);
+    var form1 =document.createElement('button');
+    var form2 =document.createElement('button');
+    var form3 =document.createElement('button');
+    var form4 =document.createElement('button');
+    form1.append(questions[questionIndex].FIRSTCHOICE);
+    form2.append(questions[questionIndex].SECONDCHOICE);
+    form3.append(questions[questionIndex].THIRDCHOICE);
+    form4.append(questions[questionIndex].FOURTHCHOICE);
     document.getElementById('question').append(h1);
-    document.getElementById('first').append(form);
-    document.getElementById('second').append(form);
-    document.getElementById('third').append(form);
-    document.getElementById('fourth').append(form);
+    document.getElementById('first').append(form1);
+    document.getElementById('second').append(form2);
+    document.getElementById('third').append(form3);
+    document.getElementById('fourth').append(form4);
     //
     //h1.append(questions[questionIndex].QUESTION.);
     //document.getElementById('question').append(h1);
