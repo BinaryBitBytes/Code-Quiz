@@ -1,0 +1,6 @@
+As a payroll specialist I want to make a program that calculates the pay of employees and their taxes to be deducted.
+
+As a employee I want to see my pay broken down by the day, by the hour, by the minute. I want to also see my pay after taxes.
+
+Then the goal is to also present payroll and the employee with their pay over: 1 week, 2 weeks, a month, quarter and a year.
+
