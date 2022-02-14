@@ -49,7 +49,7 @@ var askQuestion = '';
 var nextQuestion = '';
 var inAnswer = '';
 var seconds = time.setSeconds(75);
-const setTime = window.localStorage.setItem(SecondS, 'time');//setItem.(setSeconds(),('time');//sets the timer to local storage
+const setTime = window.localStorage.setItem(SecondS, 'time');///setItem.(setSeconds(),('time');//sets the timer to local storage
 const holdTime = window.localStorage.getItem(SecondS, ('time'));//getchest the timer from local storage
 //clear the local storage?///const resetTime= window.localStorage.Clear('time');
 var userAnswer = document.querySelector('inAnswer#a'); //value stored in answer
@@ -73,12 +73,19 @@ function startQuiz() {
 
         if (startTimer == 0) { // if i were to do ===0 then it would count to negative and not print out of time. This would continue counting in negative direction.
             clearInterval(count);
-            document.getElementById("timer").innerHTML = "Out if Time";
+            document.getElementById("timer").innerHTML = "Out of Time";
         };
 
         console.log('hi')
     }, 1000);
-    displayQuestion();
+    function ask(){
+   displayQuestion1();
+   displayQuestion2();
+   displayQuestion3();
+   displayQuestion4();
+
+    }
+    ask();
 }
 
 
@@ -89,28 +96,95 @@ document.getElementById("button-addon1").addEventListener("click", function () {
 });
 
 
-function displayQuestion(){
+function displayQuestion1(){
     var h1 = document.createElement('h1');
-    h1.append(questions[questionIndex].QUESTION);
+    h1.append(questions[0].QUESTION);
     var form1 =document.createElement('button');
     var form2 =document.createElement('button');
     var form3 =document.createElement('button');
     var form4 =document.createElement('button');
-    form1.append(questions[questionIndex].FIRSTCHOICE);
-    form2.append(questions[questionIndex].SECONDCHOICE);
-    form3.append(questions[questionIndex].THIRDCHOICE);
-    form4.append(questions[questionIndex].FOURTHCHOICE);
+    form1.append(questions[0].FIRSTCHOICE);
+    form2.append(questions[0].SECONDCHOICE);
+    form3.append(questions[0].THIRDCHOICE);
+    form4.append(questions[0].FOURTHCHOICE);
     document.getElementById('question').append(h1);
     document.getElementById('first').append(form1);
     document.getElementById('second').append(form2);
     document.getElementById('third').append(form3);
     document.getElementById('fourth').append(form4);
-    //
-    //h1.append(questions[questionIndex].QUESTION.);
-    //document.getElementById('question').append(h1);
-
+   /* function ask(){
+        document.getElementsByClassName('quest').append(a);
+        continue
+        document.getElementsByClassName('quest').append(b);
+        continue
+        document.getElementsByClassName('quest').append(c);
+        continue
+        document.getElementsByClassName('quest').append(d);
+        return
+    }*/
 
     
-
-
+   /* form1.append(questions[0].FIRSTCHOICE);
+    document.getElementById('question').append(h1);
+    form2.append(questions[1].SECONDCHOICE);
+    document.getElementById('question').append(h1);
+    form3.append(questions[2].THIRDCHOICE);
+    document.getElementById('question').append(h1);
+    form4.append(questions[3].FOURTHCHOICE);
+    document.getElementById('question').append(h1);*/
 }
+function displayQuestion2(){
+    var h1 = document.createElement('h1');
+    h1.append(questions[1].QUESTION);
+    var form1 =document.createElement('button');
+    var form2 =document.createElement('button');
+    var form3 =document.createElement('button');
+    var form4 =document.createElement('button');
+    form1.append(questions[1].FIRSTCHOICE);
+    form2.append(questions[1].SECONDCHOICE);
+    form3.append(questions[1].THIRDCHOICE);
+    form4.append(questions[1].FOURTHCHOICE);
+    document.getElementById('question').append(h1);
+    document.getElementById('first').append(form1);
+    document.getElementById('second').append(form2);
+    document.getElementById('third').append(form3);
+    document.getElementById('fourth').append(form4);
+}
+function displayQuestion3(){
+    var h1 = document.createElement('h1');
+    h1.append(questions[2].QUESTION);
+    var form1 =document.createElement('button');
+    var form2 =document.createElement('button');
+    var form3 =document.createElement('button');
+    var form4 =document.createElement('button');
+    form1.append(questions[2].FIRSTCHOICE);
+    form2.append(questions[2].SECONDCHOICE);
+    form3.append(questions[2].THIRDCHOICE);
+    form4.append(questions[2].FOURTHCHOICE);
+    document.getElementById('question').append(h1);
+    document.getElementById('first').append(form1);
+    document.getElementById('second').append(form2);
+    document.getElementById('third').append(form3);
+    document.getElementById('fourth').append(form4);
+}
+function displayQuestion4(){
+    var h1 = document.createElement('h1');
+    h1.append(questions[3].QUESTION);
+    var form1 =document.createElement('button');
+    var form2 =document.createElement('button');
+    var form3 =document.createElement('button');
+    var form4 =document.createElement('button');
+    form1.append(questions[3].FIRSTCHOICE);
+    form2.append(questions[3].SECONDCHOICE);
+    form3.append(questions[3].THIRDCHOICE);
+    form4.append(questions[3].FOURTHCHOICE);
+    document.getElementById('question').append(h1);
+    document.getElementById('first').append(form1);
+    document.getElementById('second').append(form2);
+    document.getElementById('third').append(form3);
+    document.getElementById('fourth').append(form4);
+}
+/*function showScore() {
+    var score= ;
+    var time =
+}*/
