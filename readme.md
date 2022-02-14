@@ -1,9 +1,10 @@
-##CODE QUIZ#
+##CODE QUIZ
 ------------
 ##LIVEPAGE
 ----------
 https://binarybitbytes.github.io/Code-Quiz/
-------GITHUB PAGE-------
+##GITHUB PAGE
+-------
 https://github.com/BinaryBitBytes/Code-Quiz
 ##USE CASE
 ----------
